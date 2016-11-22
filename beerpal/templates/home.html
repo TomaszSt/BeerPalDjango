@@ -1,0 +1,57 @@
+{% load crispy_forms_tags %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Beer Pal</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
+
+
+</head>
+<body class="bw">
+<!--<body bgcolor="yellow !important">-->
+<!--<style>-->
+   <!--div { background-color: yellow !important ; min-height: 100%}-->
+<!--</style>-->
+<div class="col-md-12">
+    <div class="col-md-4">
+        <a href="https://twitter.com/intent/tweet?screen_name=Beer_Pal_Poznan" class="twitter-mention-button" data-show-count="false">Tweet to @Beer_Pal_Poznan</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+    </div>
+<center>
+
+    <div class="col-md-4">
+
+        <span class="fa-stack fa-lg fa-5x">
+  <i class="fa fa-square fa-stack-2x fa-inverse"></i>
+
+  <!--<i class="fa fa-square-o fa-stack-2x"></i>-->
+<i class="fa fa-beer fa-stack-1x "></i>
+        <!--<i class="fa fa-circle-o-notch fa-spin fa-fw fa-stack-2x"></i>-->
+          <!--<i class="fa fa-circle fa-stack-3x"></i>-->
+
+    </span>
+<form method="post" action="/">{% csrf_token %}
+    {{form|crispy}}
+    <input class="btn btn-primary" type="submit" value="Beer Me!">
+
+</form>
+
+
+    </div>
+
+
+    <div class="col-md-4">
+        <a class="twitter-timeline" data-width="300" data-height="500" data-theme="dark" data-link-color="#2B7BB9" href="https://twitter.com/Beer_Pal_Poznan">Tweets by Beer_Pal_Poznan</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+
+</center>
+</div>
+
+
+</body>
+
+</html>
