@@ -39,8 +39,6 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'newsletter',
     'crispy_forms'
-
-	
 )
 
 MIDDLEWARE_CLASSES = (
