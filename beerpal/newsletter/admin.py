@@ -6,7 +6,7 @@ from .models import SignUp
 
 class SignUpAdmin(admin.ModelAdmin):
     list_display = ["__unicode__","email","date_created"]
-    class Metaa:
+    class Meta:
         model = SignUp
 
 admin.site.register(SignUp,SignUpAdmin)

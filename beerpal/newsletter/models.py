@@ -7,7 +7,7 @@ class SignUp(models.Model):
     full_name = models.CharField(max_length=255,blank=False,null=False)
     date_created = models.DateTimeField(auto_now_add=True,auto_now=False)
     date_updated = models.DateTimeField(auto_now_add=False, auto_now=True)
-    agreement = models.IntegerField()
+    agreement = models.BooleanField()
 
     def __unicode__(self):
         return self.email

@@ -39,6 +39,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'newsletter',
     'crispy_forms'
+
 )
 
 MIDDLEWARE_CLASSES = (
@@ -76,13 +77,36 @@ WSGI_APPLICATION = 'beerpal.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 
+#dev
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+#uat
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'beerpalluat',
+#         'USER': 'beerpaladmin',
+#         'PASSWORD': 'uatpassword',
+#         'HOST': 'beerpalluat.crriappxvm08.eu-central-1.rds.amazonaws.com',
+#         'PORT': '3306',
+#     }
+# }
 
+#live
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'beerpal',
+#         'USER': 'admin',
+#         'PASSWORD': 'livepassword',
+#         'HOST': 'beerpal.crriappxvm08.eu-central-1.rds.amazonaws.com',
+#         'PORT': '3306',
+#     }
+# }
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
